@@ -1,0 +1,183 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333; /* 黑色背景 */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.username-display {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* 使其占满父容器的可用空间 */
+    height: 100vh; /* 确保容器的高度为视口高度 */
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px; /* 固定宽度 */
+    text-align: center; /* 内容居中对齐 */
+}
+
+.login-form h2 {
+    margin-top: 0;
+    color: #333; /* 修改标题颜色 */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: calc(100% - 22px); /* 适应宽度减去内边距 */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-form input[type="submit"] {
+    width: calc(100% - 22px); /* 适应宽度减去内边距 */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0; /* 增加按钮之间的间距 */
+}
+
+.login-btn {
+    background-color: #4CAF50; /* 绿色 */
+    color: white;
+}
+
+.register-btn {
+    background-color: #2196F3; /* 蓝色 */
+    color: white;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.chat-window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbox {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+}
+
+.input-container {
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.input-container textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+.input-container input[type="submit"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #4CAF50; /* 绿色 */
+    color: white;
+}
+
+.chatbox .message {
+    margin-bottom: 10px;
+}
+
+.chatbox .message.user {
+    text-align: right;
+}
+
+.chatbox .message.other {
+    text-align: left;
+}
+
+.chatbox .message .content {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chatbox .message.user .content {
+    background-color: #d4edda; /* 绿色背景 */
+}
+
+.chatbox .message.other .content {
+    background-color: #f8d7da; /* 红色背景 */
+}
+
+button#sync-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff; /* 蓝色 */
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    width: calc(100% - 22px); /* 适应宽度减去内边距 */
+}
+
+.logout, .delete {
+    width: calc(100% - 22px); /* 适应宽度减去内边距 */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.logout {
+    background-color: #f44336; /* 红色 */
+    color: white;
+}
+
+.delete {
+    background-color: #e64a19; /* 深橙色 */
+    color: white;
+}
