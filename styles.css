@@ -20,6 +20,11 @@ body {
     flex-direction: column;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+    width: 300px; /* 增加侧边栏的宽度 */
 }
 
 .username-display {
@@ -109,6 +114,10 @@ body {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    resize: vertical; /* 仅允许垂直调整大小 */
+    max-width: 100%; /* 最大宽度为100% */
+    max-height: 200px; /* 设置最大高度 */
+    min-height: 50px;
     margin-bottom: 10px;
     height: 60px;
 }
@@ -180,4 +189,48 @@ button#sync-button {
 .delete {
     background-color: #e64a19; /* 深橙色 */
     color: white;
+}
+
+/* 新增：当在移动设备上显示时，自适应调整 */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%; /* 侧边栏全屏宽度 */
+        box-shadow: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .chat-window {
+        height: calc(100vh - 250px); /* 调整聊天窗口高度 */
+    }
+
+    .input-container {
+        border-top: none;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/* 当横屏且宽度在768px以内时，恢复为桌面布局 */
+@media screen and (min-width: 768px) and (orientation: landscape) {
+    .container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        border-bottom: none;
+    }
+
+    .chat-window {
+        height: 100vh;
+    }
+
+    .input-container {
+        border-top: 1px solid #ddd;
+        border-bottom: none;
+    }
 }
